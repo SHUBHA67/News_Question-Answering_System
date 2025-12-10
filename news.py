@@ -14,7 +14,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnableMap, RunnablePassthrough
 
 
-st.title("📰 Gemini 2.5 Flash RAG — News URL Q&A Bot (LangChain 0.3+)")
+st.title("📰 Gemini 2.5 Flash RAG — News URL Q&A Bot ")
 
 if "vectorstore" not in st.session_state:
     st.session_state.vectorstore = None
@@ -105,3 +105,4 @@ Answer clearly and concisely.
         for i, d in enumerate(docs, 1):
             st.markdown(f"**Source {i}:** {d.metadata.get('source','')}")
             st.code(d.page_content[:400] + "...")
+
